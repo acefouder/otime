@@ -1,0 +1,103 @@
+<!--pages/gnue/gnue.wxml-->
+<!-- 新建按钮 -->
+<view class="newBtn" wx:if='{{authority}}'>
+  <van-button
+  type="primary" 
+  size="large"
+  plain
+  round
+  bindtap="showPopup"
+  >旧音符</van-button>
+</view>
+
+
+<!-- 新建弹窗 -->
+<van-popup
+  show="{{ show }}" 
+  bind:close="onClose"
+  position="top"
+  custom-style="height: 50%;"
+  round
+  closeable
+ >
+  <form bindsubmit="onSubmit">
+    <view class="writeView">
+      <van-cell title="音符本"/>
+      <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.5em" 
+          placeholder="请输入时间" 
+          placeholder-style="color:gray;"
+          name="pageName"/>
+      </view>
+      <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.5em" 
+          placeholder="请输入题目" 
+          placeholder-style="color:gray;"
+          name="pageDiscribe"/>
+      </view>
+          <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.5em" 
+          placeholder="请输入作者" 
+          placeholder-style="color:gray;"
+          name="pageAdress"/>
+      </view>
+         <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.5em" 
+          placeholder="图片不需要填写" 
+          placeholder-style="color:gray;"
+          name="pageImgsrc"/>
+      </view>
+         <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.5em" 
+          placeholder="请输入序号" 
+          placeholder-style="color:gray;"
+          name="pageOr"/>
+      </view>
+    </view>
+    <view class='submitBtnView'>
+      <button type="primary" formType="submit" plain="true">刻录</button>
+    </view>
+  </form>
+</van-popup>
+
+
+
+<!-- 页面列表 -->
+<van-skeleton
+  title
+  row="10"
+  loading="{{loading}}"
+>
+
+
+  <block class="bck" wx:for='{{pageList}}' wx:key="_id" > 
+   <!--wx:if='{{authority}}' 判断是否需要管理员才显示列表-->
+   
+
+<view class="tuwen"> 
+  <navigator class="img" url="../aboutmsgPages/aboutmsgPages?id={{item._id}}">
+<!-- {{item.imgsrc}} -->
+<image src="https://7765-wentan-zgz72-1301696266.tcb.qcloud.la/360%E6%88%AA%E5%9B%BE20200330215811762.jpg?sign=e2890503ba95b5207aaad794b2fa0404&t=1585576906"></image> </navigator>
+<view class="nat">{{item.name}}</view>
+<view class="dst">{{item.discribe}}</view>
+<view class="adt">{{item.adress}}</view>
+
+
+ </view>
+      <!-- <van-cell title="{{item.name}}" label="{{item.discribe}}"/> -->
+
+  
+  </block>
+</van-skeleton>
+
+

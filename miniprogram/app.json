@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/msgPages/msgPages",
+    "pages/user/user",
+    "pages/gnue/gnue",
+    "pages/gnuemsgPages/gnuemsgPages",
+    "pages/about/about",
+    "pages/aboutmsgPages/aboutmsgPages"
+  ],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "旧时光",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#8a8a8a",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "image/shou_st.png",
+        "iconPath": "image/shou.png",
+        "pagePath": "pages/index/index",
+        "text": "时光"
+      },
+        {
+          "selectedIconPath": "image/gnue_st.png",
+          "iconPath": "image/gnue.png",
+          "pagePath": "pages/gnue/gnue",
+          "text": "往昔"
+        },
+          {
+            "selectedIconPath": "image/muc_st.png",
+            "iconPath": "image/muc.png",
+            "pagePath": "pages/about/about",
+            "text": "音符"
+          },
+      {
+        "selectedIconPath": "image/user_st.png",
+        "iconPath": "image/user.png",
+        "pagePath": "pages/user/user",
+        "text": "相遇"
+      }
+    ]
+  },
+
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-popup": "@vant/weapp/popup",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-skeleton": "@vant/weapp/skeleton",
+    "van-tag": "@vant/weapp/tag",
+    "van-icon": "@vant/weapp/icon"
+  },
+
+  "sitemapLocation": "sitemap57.json"
+}

@@ -1,0 +1,101 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button></view>
+       <!--tab-->
+     <!-- <view class="content"></view> -->
+  <view class="navbg">
+    <view class="nav">
+     <scroll-view class="scroll-view_H" scroll-x="true" enable-flex="true">
+
+      <view class="scroll-view_H">
+
+
+        <view><view class="{{flag==0? 'select':'normal'}}" id="0" bindtap="switchNav"><image class="img" src="{{flag==0? '../../image/zan_st.png':'../../image/zan.png'}}"></image>夸我夸我</view></view>
+
+
+        <view><view class="{{flag==1? 'select':'normal'}}" id="1" bindtap="switchNav"><image class="img" src="{{flag==1? '../../image/yue_st.png':'../../image/yue.png'}}">></image>约我约我</view></view>
+
+
+
+        <view><view class="{{flag==2? 'select':'normal'}}" id="2" bindtap="switchNav"><image class="img" src="{{flag==2? '../../image/kua_st.png':'../../image/kua.png'}}">></image>哇卡哇卡</view></view>
+
+        </view>
+     </scroll-view>
+    </view>
+  </view>
+<text style="margin-bottom:10rpx;">{{flag==0? '赠人玫瑰，手留余香':''}}{{flag==1? '想要的明天，将如约而至':''}}{{flag==2? '时光很短，请勿忧伤':''}}</text>
+    <!--发邮件-->
+
+ <form bindsubmit="onSubmit" class="sent"> 
+    <view class="writeView">
+      <text class="tx">Send Me An Email</text>
+      <view class="inp">
+        <textarea
+          value="{{textValue}}"
+          style="height: 3em;" 
+          placeholder="输入您的昵称" 
+          placeholder-style="color:gray;"
+          name="pageName"/>
+      </view>
+      <view class="inp">
+        <textarea
+          value="{{textValue}}"
+          style="height: 3em;" 
+          placeholder="输入您的邮箱" 
+          placeholder-style="color:gray;"
+          name="pageYouxiang"/>
+      </view>
+          <view class="inp">
+        <textarea
+          value="{{textValue}}"
+          style="height: 3em;" 
+          placeholder="输入您的内容" 
+          placeholder-style="color:gray;"
+          name="pageContent"/></view>
+    <view class="submit">
+      <button  class="tijiao" type="primary" formType="submit" plain="true" style="color:#8a8a8a;font-size:36rpx;border:1px solid black;">确认提交</button>
+    </view>
+ </view>
+  </form>
+
+<!--bottom content-->
+<view class="bottom">
+<text>合作、约我、以及其他有趣的\n</text>
+<text>可以通过以下方式找到我</text>
+
+<view style="line-height:29px;">
+<image src="../../image/qq.png" style="width:20px;height:20px;"></image>
+<text> 3088836305</text>
+</view>
+
+
+<view style="line-height:29px;">
+<image src="../../image/wechat.png" style="width:20px;height:20px;"></image>
+<text> woesun(备注来意)</text>
+</view>
+
+
+<view class="btpc" style="line-height:29px;">
+<view class="bton">
+<button bindsubmit="sendEmail" style="width:20px;height:20px;opacity:0;background-image:url(https://7765-wentan-zgz72-1301696266.tcb.qcloud.la/tubiao/msg.png?sign=2846e23f8b189bec2956b71c787f32a2&t=1585670526);">0</button></view>
+<view class="right"><text> 2755865894@qq.com</text></view>
+</view>
+
+</view>
+
+</view>
+
+
+
+
+
+

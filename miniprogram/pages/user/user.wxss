@@ -1,0 +1,133 @@
+/* pages/user/user.wxss */
+
+
+.container {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  width:100%;
+}
+.userinfo {
+  margin-top: 20px;
+  display:flex;                   
+  justify-content: center;        
+  width:100%; 
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar[size] {
+  width: 150rpx;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+/* tabstyle */
+.navbg{
+  margin-top: 20rpx;
+  background: #f6f6f6;
+  height: 90px;
+  color: #8a8a8a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav{
+  width: 100%;
+  height: 80px;
+}
+.scroll-view_H{
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+.normal{
+  width: 60px;
+  height: 60px;
+  line-height: 95px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #8a8a8a;
+  /* padding-left: 5px;
+  padding-right: 5px; */
+  font-size: 25rpx;
+  margin-right: 10rpx;
+  position: relative;
+}
+.select{
+  border-radius: 5px;
+  margin-right: 10rpx;
+  border: 1px solid black;
+  width: 60px;
+  height: 60px;
+  line-height: 95px;
+  text-align: center;
+  /* padding-left: 5px;
+  padding-right: 5px; */
+  font-size: 25rpx;
+  font-weight: bold;
+  color: black;
+  position: relative;
+}
+.img{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10rpx;
+  left: 14px;
+}
+
+.sent{ 
+   margin-top: 10rpx;
+   width:80%;
+}
+.tx{ 
+  margin-bottom: 10rpx;
+  display:flex;                   
+  justify-content: center;   
+  text-align: center;
+}
+.submit{
+
+  font-size:50rpx;
+  color:#8a8a8a;
+}
+.tijiao{
+  width:50%;
+ 
+}
+.bottom{
+line-height:55rpx;
+margin-top:40rpx;
+font-size:25rpx;
+color:#8a8a8a;
+text-align: center;
+}
+.btpc{
+  display:flex;
+}
+
+
+.bton{
+  float: left;
+width:20px;
+height:20px;
+background-image:url(https://7765-wentan-zgz72-1301696266.tcb.qcloud.la/tubiao/msg.png?sign=2846e23f8b189bec2956b71c787f32a2&t=1585670526);
+}
+.right{
+  margin-left: 6rpx;
+  float:right;
+}

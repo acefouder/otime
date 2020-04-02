@@ -1,0 +1,100 @@
+<!-- 新建按钮 -->
+<!-- <view class="newBtn" wx:if='{{authority}}'>
+  <van-button
+  type="primary" 
+  size="large"
+  plain
+  round
+  bindtap="showPopup"
+  >新建留言板</van-button>
+</view> -->
+
+
+
+<!-- 新建弹窗 -->
+<!-- <van-popup
+  show="{{ show }}" 
+  bind:close="onClose"
+  position="top"
+  custom-style="height: 50%;"
+  round
+  closeable
+ >
+  <form bindsubmit="onSubmit">
+    <view class="writeView">
+      <van-cell title="创建留言板"/>
+      <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 2em" 
+          placeholder="请输入页面标题" 
+          placeholder-style="color:gray;"
+          name="pageName"/>
+      </view>
+      <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 3em" 
+          placeholder="请输入页面描述" 
+          placeholder-style="color:gray;"
+          name="pageDiscribe"/>
+      </view>
+    </view>
+    <view class='submitBtnView'>
+      <button type="primary" formType="submit" plain="true">确认</button>
+    </view>
+  </form>
+</van-popup> -->
+
+<!--页面内容-->
+<view class="yemian">
+
+<view class="img">
+     <image src="../../image/ab1.jpg"></image>
+</view>
+<view class="icon1">
+     <image src="../../image/xiezi.png"></image>
+</view>
+<view class="title">
+     <text class="text" style="background-color:black" >一切都是最好的安排</text>
+</view>
+<view class="content">
+     <text class="ct">人生如同行路，走着走着，一些人来了，一些人走了，分分合合，聚聚散散，渐渐地，也就懂得了，一切的因缘与际遇，都是命运最好的安排，少了任何一个角色，人生的故事都不会完整。</text>
+</view>
+<view class="author">
+     <text class="at">——匿名，《桃园野菊》</text>
+</view>
+<view class="icon2">
+     <image src="../../image/logo.png"></image>
+</view>
+<view class="bton">
+  <button
+  hover-class="none"
+  open-type="share"
+  style="width:35px;height:35px;opacity:0;background-image:url(https://7765-wentan-zgz72-1301696266.tcb.qcloud.la/tubiao/bton.png?sign=a21de373ea17d100f648e91f3382edd3&t=1585592489)"
+  >T</button> 
+</view>
+<view class="bottom">
+     <text>点击上方按钮，分享此刻时光</text>
+</view>
+
+</view>
+
+
+
+<!-- 页面列表 -->
+<!-- <van-skeleton
+  title
+  row="10"
+  loading="{{loading}}"
+>
+  <block wx:for='{{pageList}}' wx:key="_id" wx:if='{{authority}}'> 
+   <!--wx:if='{{authority}}' 判断是否需要管理员才显示列表-->
+    <!-- <navigator url="../msgPages/msgPages?id={{item._id}}">
+      <van-cell title="{{item.name}}" label="{{item.discribe}}"/>
+    </navigator>
+  </block>
+</van-skeleton> --> 
+
+
+

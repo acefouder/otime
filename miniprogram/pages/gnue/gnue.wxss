@@ -1,0 +1,65 @@
+/* pages/gnue/gnue.wxss */
+.newBtn{
+  width: 90%;
+  height: 100rpx;
+  margin:5%;
+  margin-bottom: 2%;
+}
+
+
+.tuwen{
+display: flex;
+flex-direction: column;
+align-items: center;
+box-sizing: border-box;
+width:100%;
+position: relative;
+}
+.img {
+  display:flex;                   
+  justify-content: center;        
+  width:90%; 
+  margin:5%;
+  margin-bottom: 6rpx;
+}
+/* .img image{
+   margin-left:35rpx;
+   margin-right:35rpx; 
+   margin-top:35rpx; 
+} */
+.nat{
+ width:80px;
+  height: 20px;  
+  position: absolute;
+  top: 100rpx;
+  left: 60rpx;
+  font-size:30rpx;
+  opacity:0.4; 
+  background: black;
+  color:white;
+  text-align: center;
+  line-height: 20px;
+}
+.dst{
+  height: 30px;  
+  position: absolute;
+  top: 250rpx;
+  font-size:40rpx;
+  color:white;
+  text-align: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 1rpx;
+}
+.adt{
+  height: 20px;  
+  position: absolute;
+  top: 350rpx;
+  font-size:30rpx;
+  opacity:0.6; 
+  background: black;
+  color:white;
+  text-align: center;
+  padding-left:20rpx;
+  padding-right:10rpx;
+   line-height: 20px;
+}

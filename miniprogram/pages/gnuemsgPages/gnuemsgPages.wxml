@@ -1,0 +1,123 @@
+<!--pages/gnuemsgPages/gnuemsgPages.wxml-->
+
+<!-- 留言按钮 -->
+<view class="newBtn" wx:if='{{authority}}'>
+  <van-button
+  type="primary" 
+  size="large"
+  plain
+  round
+  bindtap="showPopup"
+  >时光机</van-button>
+</view>
+
+
+<!-- 新建弹窗 -->
+<van-popup
+  show="{{ show }}" 
+  bind:close="onClose"
+  position="top"
+  custom-style="height: 50%;"
+  round
+  closeable
+ >
+  <form bindsubmit="onSubmit">
+    <view class="writeView">
+      <van-cell title="故事本"/>
+      <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.3em" 
+          placeholder="请输入题目" 
+          placeholder-style="color:gray;"
+          name="pageTitle"/>
+      </view>
+      <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.3em" 
+          placeholder="请输入内容" 
+          placeholder-style="color:gray;"
+          name="pageText"/>
+      </view>
+          <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.3em" 
+          placeholder="请输入作者" 
+          placeholder-style="color:gray;"
+          name="pageZuozhe"/>
+      </view>
+          <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 1.3em" 
+          placeholder="请输入图片" 
+          placeholder-style="color:gray;"
+          name="pageImages"/>
+      </view>
+    </view>
+    <view class='submitBtnView'>
+      <button type="primary" formType="submit" plain="true">记录</button>
+    </view>
+  </form>
+</van-popup>
+
+<van-cell wx:if='{{authority}}' label="您是管理员，可编辑留言，点击此处可复制页面路径" bindtap='copyPage' />
+<van-cell wx:if='{{authority}}' label="您是管理员，可轻点此处生成当前页面小程序码~" bindtap='getQ' />
+
+
+<van-skeleton title avatar row="3" loading="{{loading}}">
+  <!-- 普通板块 -->
+  <block wx:for="{{msgList}}" wx:key="_id" wx:if='{{!item.top}}'>
+    <!-- <view class="msgContent">
+
+      <view class='msgText'>
+        <text class='nameTitle'>{{item.title}}</text>
+      </view> -->
+
+      <!-- 头像部分 -->
+      <!-- <view class='msgText'>
+        <text class='nameText'>{{item.text}}</text>
+      </view>
+      <view class="imgView">
+        <image src="{{item.images}}" class="headImg"></image>
+      </view>
+ </view> -->
+
+
+<view class="yemian">
+
+<view class="img">
+     <image src="{{item.images}}"></image>
+</view>
+<view class="icon1">
+     <image src="../../image/xiezi.png"></image>
+</view>
+<view class="title">
+     <text class="text" style="background-color:black" >{{item.title}}</text>
+</view>
+<view class="content">
+     <text class="ct">{{item.text}}</text>
+</view>
+<view class="author">
+     <text class="at">{{item.zuozhe}}</text>
+</view>
+<view class="icon2">
+     <image src="../../image/logo.png"></image>
+</view>
+<view class="bton">
+  <button
+  hover-class="none"
+  open-type="share"
+  style="width:35px;height:35px;opacity:0;background-image:url(https://7765-wentan-zgz72-1301696266.tcb.qcloud.la/tubiao/bton.png?sign=a21de373ea17d100f648e91f3382edd3&t=1585592489)">T</button> 
+</view>
+<view class="bottom">
+     <text>点击上方按钮，分享时光故事</text>
+</view>
+</view>
+</block>
+</van-skeleton> 
+
+<image class="back" wx:if="{{collected}}" src="../../image/back.png" ></image>
+<image class="back" wx:else catchtap='postCollection' src="../../image/back_st.png"></image>

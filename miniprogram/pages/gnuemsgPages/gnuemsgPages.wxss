@@ -1,0 +1,157 @@
+/* pages/gnuemsgPages/gnuemsgPages.wxss */
+/* 
+.nameTitle{
+  display: flex;
+  justify-content: center;  
+   margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgb(206, 100, 100);
+  width: 90%;
+  font-size: 16px;
+}
+
+.msgText{
+  display: flex;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgb(126, 67, 67);
+  width: 90%;
+  font-size: 14px;
+}
+
+
+.imgView{
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+.imgView image{
+  height: 100%;
+  width:100%;
+}  */
+
+
+.newBtn{
+  width: 90%;
+  height: 100rpx;
+  margin:5%;
+  margin-bottom: 3%;
+}
+
+
+.yemian{
+display: flex;
+flex-direction: column;
+align-items: center;
+box-sizing: border-box;
+width:100%;
+}
+.img {
+  display:flex;                   
+  justify-content: center;        
+  width:100%; 
+
+}
+.img image{
+  margin:35rpx;
+}
+.icon1 .title .icon2{
+  display:flex;                   
+  justify-content: center;        
+  width:100%;
+}
+.icon1 image{
+  width: 32px;
+  height:32px;
+  margin:20rpx;
+}
+.text{
+  font-size: 35rpx;
+  padding: 10rpx;
+  font-family: FangSong;
+  color:white;
+}
+.content{
+  display:flex;                   
+  justify-content: center;        
+  margin-top: 50rpx;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+.ct{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-family: SimSun;
+  color:black;
+}
+
+.author .bottom{
+  display:flex;                   
+  justify-content: center;        
+}
+.at{
+  font-size: 30rpx;
+  font-family: SimSun;
+  color:black;
+}
+.icon2 image{
+  width:100px;
+  height: 60px; 
+}
+
+.bton{
+width:35px;
+height:35px;
+background-image:url("https://7765-wentan-zgz72-1301696266.tcb.qcloud.la/tubiao/bton.png?sign=a21de373ea17d100f648e91f3382edd3&t=1585592489");
+}
+.bottom{
+  font-size: 26rpx;
+  font-family: SimSun;
+  color:black;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+
+/* .bttombut{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.left{
+  font-family: "楷体";
+  margin-left: 30px;
+  background-color: rgb(204, 202, 202);
+  border-radius: 98rpx;
+
+}
+.right{
+  font-family: "楷体";
+  margin-right: 30px;
+  background-color: rgb(204, 202, 202);
+  border-radius: 98rpx;
+  
+} */
+button::after {
+  border: none;
+}
+
+.back{
+
+  float: right;
+  position: fixed;
+  bottom: 120rpx;
+  right: 30rpx; 
+  width: 35px;
+  height: 35px;
+
+}
